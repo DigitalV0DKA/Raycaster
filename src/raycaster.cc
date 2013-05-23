@@ -45,10 +45,8 @@
  *
  */
 
-#include <SDL/SDL.h>
-#include <unistd.h>
+
 #include <cmath>
-#include <iostream>
 
 #include "api_interface.h"
 
@@ -235,7 +233,7 @@ static void draw_screen(raycaster_t *data)
     // find line length to draw (i.e. height)
     // inverse of wall distance * window height - stuff far away is shorter
     // and stuff that is closer appears larger (perspective).
-    line_len = abs(int(1.0 / p_wall_dist * window_height));
+    line_len = std::abs(int(1.0 / p_wall_dist * window_height));
     
     //calculate start/end pixels of the line. all lines have to be centered at window_height / 2
     line_start = -line_len / 2 + window_height / 2;

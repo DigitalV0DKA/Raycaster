@@ -50,6 +50,7 @@
 #define __API_INTERFACE_H__
 
 #include <stdint.h>
+#include <unistd.h>
 
 typedef struct color_t {
   uint8_t r;
